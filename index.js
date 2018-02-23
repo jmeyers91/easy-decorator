@@ -1,5 +1,5 @@
 
-module.exports = function easyDecorator(fn) {
+function easyDecorator(fn) {
   return function argReceiver(...fnArgs) {
     // Check if the decorator is being called without arguments (ex `@foo methodName() {}`)
     if(fnArgs.length === 3) {
@@ -22,3 +22,7 @@ module.exports = function easyDecorator(fn) {
     }
   };
 }
+
+module.exports = easyDecorator;
+module.exports.default = easyDecorator;
+module.exports.easyDecorator = easyDecorator;

@@ -1,6 +1,6 @@
 {
   "name": "easy-decorator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A utility function for writing ES7 method/getter decorators.",
   "repository": {
     "type": "git",
