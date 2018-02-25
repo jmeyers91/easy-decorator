@@ -16,7 +16,7 @@ function easyDecorator(fn) {
     // and replaces the appropriate key with the decorated function.
     function descriptorChecker(target, key, descriptor) {
       const descriptorKey = descriptor.value ? 'value' : 'get';
-      return Object.assign({}, decorator, {
+      return Object.assign({}, descriptor, {
         [descriptorKey]: fn(descriptor[descriptorKey], ...fnArgs),
       });
     }
